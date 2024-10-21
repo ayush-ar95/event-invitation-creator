@@ -3,25 +3,57 @@ body {
     padding: 0;
     background: linear-gradient(to right, #2c3e50, #3498db);
     color: #333;
-    padding: 40px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    min-height: 90vh;
-    min-width: 50vh;
+    min-height: 100vh;
+}
+
+.dialog-box-div {
+    /* -webkit-backdrop-filter: blur(5px); For Safari */
+    backdrop-filter: blur(3px);
+    /* For other browsers */
+    inset: 0;
+    z-index: 10;
+    position: fixed;
+    align-items: center;
+    display: none;
+}
+
+.dialog-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #b097f4, #8553b6);
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
+
+.dialog-button {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    background: transparent;
+    color: red;
+    border: none;
+    outline: none;
+    font-size: 16px;
 }
 
 .form-container {
     background-color: white;
-    padding: 1px 20px 20px 20px;
+    padding: 20px;
     border-radius: 7px;
     box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50vh;
+    width: 50%;
+    margin: 25px;
 }
 
 h1 {
@@ -29,6 +61,19 @@ h1 {
     font-weight: bold;
     color: #0d47a1;
     text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 0 8px;
+    width: 100%;
+
+    div {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 input,
@@ -39,7 +84,7 @@ textarea {
     border-radius: 4px;
     background-color: #f3f4f6;
     outline: none;
-    width: 97%;
+    ;
     margin: 10px 0;
 }
 
@@ -48,9 +93,10 @@ textarea:hover {
     border: 1px solid #ff5722;
 }
 
-button {
+.submit-button {
     width: 100%;
     background-color: #ff6b00;
+    background: linear-gradient(to right, #fd881b, #fb5638);
     color: white;
     border-radius: 10px;
     border: none;
@@ -59,7 +105,7 @@ button {
     margin-top: 10px;
 }
 
-button:hover {
+.submit-button:hover {
     background-color: #ff9f40;
 }
 
@@ -68,5 +114,4 @@ label {
     font-size: large;
     width: 100%;
     margin-bottom: 10px;
-    padding: 7px;
 }

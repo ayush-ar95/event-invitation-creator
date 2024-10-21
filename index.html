@@ -9,24 +9,45 @@
 </head>
 
 <body>
+    <div class="dialog-box-div">
+        <dialog class="dialog-box">
+            <p>Please fill in all fields</p>
+            <button class="dialog-button">X</button>
+        </dialog>
+    </div>
+
     <div class="form-container">
         <h1>Create an Event Invite</h1>
         <form>
-            <label>Event Name</label>
-            <input type="name" placeholder="Kerala JS Meetup">
-            <label>Event Date</label>
-            <input type="date">
-            <label>Start Time</label>
-            <input type="time">
-            <label>End Time</label>
-            <input type="time">
-            <label>Event Description</label>
-            <textarea rows="3" cols="20" placeholder="Brief description of the event"></textarea>
-            <label>Location</label>
-            <input type="name" placeholder="Location of the event">
+            <div class="event-name-div">
+                <label>Event Name</label>
+                <input type="name" placeholder="Kerala JS Meetup" value="" class="event-name-input">
+            </div>
+            <div class="event-date-div">
+                <label>Event Date</label>
+                <input type="date" value="" class="event-date-input">
+            </div>
+            <div class="start-time-div">
+                <label>Start Time</label>
+                <input type="time" value="" class="start-time-input">
+            </div>
+            <div class="end-time-div">
+                <label>End Time</label>
+                <input type="time" value="" class="end-time-input">
+            </div>
+            <div class="event-description-div">
+                <label>Event Description</label>
+                <textarea rows="5" cols="20" placeholder="Brief description of the event" value=""
+                    class="event-description-input"></textarea>
+            </div>
+            <div class="location-div">
+                <label>Location</label>
+                <input type="name" placeholder="Location of the event" value="" class="location-input">
+            </div>
         </form>
-        <button type="submit">Create Event</button>
+        <button type="submit" class="submit-button">Create Event</button>
     </div>
+    <script src="index.js"></script>
 </body>
 
 </html>
