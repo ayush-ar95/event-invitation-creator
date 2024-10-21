@@ -9,43 +9,53 @@
 </head>
 
 <body>
-    <div class="dialog-box-div">
-        <dialog class="dialog-box">
-            <p>Please fill in all fields</p>
-            <button class="dialog-button">X</button>
-        </dialog>
+    <div class="form-div">
+        <div class="dialog-box-div">
+            <dialog class="dialog-box">
+                <p>Please fill in all fields</p>
+                <button class="dialog-button">X</button>
+            </dialog>
+        </div>
+        <div class="form-container">
+            <h1 class="form-heading">Create an Event Invite</h1>
+            <form>
+                <div class="event-name-div">
+                    <label>Event Name</label>
+                    <input type="name" placeholder="Kerala JS Meetup" value="" class="event-name-input">
+                </div>
+                <div class="event-date-div">
+                    <label>Event Date</label>
+                    <input type="date" value="" class="event-date-input">
+                </div>
+                <div class="start-time-div">
+                    <label>Start Time</label>
+                    <input type="time" value="" class="start-time-input">
+                </div>
+                <div class="end-time-div">
+                    <label>End Time</label>
+                    <input type="time" value="" class="end-time-input">
+                </div>
+                <div class="event-description-div">
+                    <label>Event Description</label>
+                    <textarea rows="5" cols="20" placeholder="Brief description of the event" value=""
+                        class="event-description-input"></textarea>
+                </div>
+                <div class="location-div">
+                    <label>Location</label>
+                    <input type="name" placeholder="Location of the event" value="" class="location-input">
+                </div>
+                <button type="submit" class="submit-button">Create Event</button>
+            </form>
+        </div>
     </div>
-
-    <div class="form-container">
-        <h1>Create an Event Invite</h1>
-        <form>
-            <div class="event-name-div">
-                <label>Event Name</label>
-                <input type="name" placeholder="Kerala JS Meetup" value="" class="event-name-input">
-            </div>
-            <div class="event-date-div">
-                <label>Event Date</label>
-                <input type="date" value="" class="event-date-input">
-            </div>
-            <div class="start-time-div">
-                <label>Start Time</label>
-                <input type="time" value="" class="start-time-input">
-            </div>
-            <div class="end-time-div">
-                <label>End Time</label>
-                <input type="time" value="" class="end-time-input">
-            </div>
-            <div class="event-description-div">
-                <label>Event Description</label>
-                <textarea rows="5" cols="20" placeholder="Brief description of the event" value=""
-                    class="event-description-input"></textarea>
-            </div>
-            <div class="location-div">
-                <label>Location</label>
-                <input type="name" placeholder="Location of the event" value="" class="location-input">
-            </div>
-        </form>
-        <button type="submit" class="submit-button">Create Event</button>
+    <div class="invitation-div">
+        <h1 class="invitation-heading">YOU ARE INVITED</h1>
+        <p class="invitation-subheading">TO JOIN THE</p>
+        <h2 class="invitation-title">Kerala JS Meetup</h2>
+        <p class="invitation-date">date</p>
+        <p class="invitation-time">time</p>
+        <p class="invitation-place">place</p>
+        <p class="invitation-description">description</p>
     </div>
     <script src="index.js"></script>
 </body>

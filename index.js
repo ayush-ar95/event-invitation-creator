@@ -13,8 +13,10 @@ submitButton.addEventListener("click", (event) => {
     if (!eventNameInput.value || !eventDateInput.value || !startTimeInput.value || !endTimeInput.value || !eventDescriptionInput.value || !locationInput.value) {
         dialogBox.style.display = "flex";
     }
-    else
+    else {
         console.log("happy to go");
+
+    }
 });
 
 cancelButton.addEventListener("click", (event) => {
