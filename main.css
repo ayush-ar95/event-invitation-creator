@@ -129,7 +129,7 @@ label {
 .invitation-div{
     border: 5px solid #e74c3c;
     background-color: white;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
