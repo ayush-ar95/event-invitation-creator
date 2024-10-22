@@ -18,6 +18,16 @@ const invitationTime = document.querySelector(".invitation-time");
 const invitationPlace = document.querySelector(".invitation-place");
 const invitationDescription = document.querySelector(".invitation-description");
 
+
+const formateTime = (timeValue) => {
+    let [hour, minute] = timeValue.split(":");
+    hour = parseInt(hour);
+    let period = hour >= 12 ? "PM" : "AM";
+    hour = hour % 12 || 12;
+
+    return `${hour}:${minute} ${period}`;
+}
+
 submitButton.addEventListener("click", (event) => {
     event.preventDefault();
     if (!eventNameInput.value || !eventDateInput.value || !startTimeInput.value || !endTimeInput.value || !eventDescriptionInput.value || !locationInput.value) {
@@ -26,8 +36,14 @@ submitButton.addEventListener("click", (event) => {
     else {
         formDiv.style.display = "none";
         invitationTitle.textContent = eventNameInput.value;
-        invitationDate.textContent = eventDateInput.value;
-        invitationTime.textContent = startTimeInput.value + "-" + endTimeInput.value;
+
+        const dateValue = new Date(eventDateInput.value);
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        const formattedDate = new Intl.DateTimeFormat('en-US', options).format(dateValue);
+        invitationDate.textContent = formattedDate;
+
+        invitationTime.textContent = `${formateTime(startTimeInput.value)} - ${formateTime(endTimeInput.value)}`;
+
         invitationPlace.textContent = locationInput.value;
         invitationDescription.textContent = eventDescriptionInput.value;
         invitaionBody.style.background = "white";
@@ -40,4 +56,3 @@ cancelButton.addEventListener("click", (event) => {
     event.preventDefault();
     dialogBox.style.display = "none";
 });
-
